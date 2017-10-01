@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var server = app.listen(3000);
+var server = app.listen(process.env.PORT || 3000);
 var io = require('socket.io').listen(server);
 
 app.use(express.static(__dirname + '/public'));
@@ -13,7 +13,6 @@ io.on('connection', function(socket){
 	// Defines the username
 	var username;
 	socket.on('username', function(nickname){
-		console.log(nickname);
 		username = nickname;
 	});
 
