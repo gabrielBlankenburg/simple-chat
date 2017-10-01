@@ -1,0 +1,29 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "A simple chat system with node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chat",
+    "node"
+  ],
+  "author": "Gabriel Blankenburg Piasecki Silva",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "express": "^4.16.1",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-minify": "^1.0.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-refresh": "^1.1.0",
+    "http": "0.0.0",
+    "jquery": "^3.2.1"
+  }
+}
