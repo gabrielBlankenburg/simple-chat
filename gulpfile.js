@@ -13,13 +13,9 @@ gulp.task('javascript', function(){
 			.pipe(gulp.dest('public/script'));
 });
 
-// refresh the browser after changes
-gulp.task('refresh', function(){
-	browserSync.init({
-        poxy: 'localhost'
-    });
-	return gulp.watch(['public', 'public/script/*', 'public/style/*']).on('change', reload);
-})
+gulp.task('watch', function(){
+	return gulp.watch('src/*.js', ['javascript']);
+});
 
 // refresh the server after changes
 gulp.task('start', function () {
@@ -28,6 +24,4 @@ gulp.task('start', function () {
 	});
 });
 
-gulp.task('default', ['javascript', 'start'], function(){
-	return gulp.watch('src/*.js', ['javascript']);
-});
+gulp.task('default', ['javascript', 'start', 'watch']);

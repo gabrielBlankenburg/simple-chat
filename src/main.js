@@ -25,10 +25,13 @@ $(function () {
 	socket.on('message', function(resp){
 		// add the class if the username that sent the message is the current user
 		if(resp.username == username){
-			$('#sentMsg').append($('<li class="currentUser">').text(resp.username+': '+resp.msg));
+			$('#sentMsg').append($('<li class="currentUser">').html('<div class="message"><b>'+resp.username+'</b>: '+resp.msg+'</div>'));
 		}
 		else{
 			$('#sentMsg').append($('<li>').text(resp.username+': '+resp.msg));
 		}
+
+		// Scroll to the last message
+		$('#sentMsg').scrollTop($('#sentMsg')[0].scrollHeight);
 	});
 });

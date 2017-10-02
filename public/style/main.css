@@ -27,10 +27,19 @@ input{
 	overflow: auto;
 }	
 
+#sentMsg img{
+	width: 40%;
+	height: 60%;
+}
+
 #sentMsg li.currentUser{
 	background-color: #eee;
 }
 
+#sentMsg li{
+	position: relative;
+	bottom: 0;
+}
 
 /* the input to send message */
 #msg{

@@ -16,7 +16,7 @@ io.on('connection', function(socket){
 		username = nickname;
 	});
 
-	// Get and send the messages
+	// Gets and sends the messages
 	socket.on('message', function(msg){
 		io.emit('message', {msg:msg, username:username});
 	});
