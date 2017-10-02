@@ -23,12 +23,23 @@ $(function () {
 
 	// when a message is sent to the socket it pushes the messages
 	socket.on('message', function(resp){
-		// add the class if the username that sent the message is the current user
+		// Gets the current date and time
+		var dt = new Date();
+		var hours = dt.getHours();
+		var minute = dt.getMinutes();
+		if(minute.length == 1){
+			minute = '0'+minute;
+		}
+		var time = hours+':'+minute;
+
+		// Adds the class if the username that sent the message is the current user
 		if(resp.username == username){
-			$('#sentMsg').append($('<li class="currentUser">').html('<div class="message"><b>'+resp.username+'</b>: '+resp.msg+'</div>'));
+			$('#sentMsg').append($('<li class="currentUser">').html('<div class="message"><b>'+resp.username+'</b> <span class="time">'+
+				time+'</span> <span class="lineMessage">'+resp.msg+'</span></div>'));
 		}
 		else{
-			$('#sentMsg').append($('<li>').text(resp.username+': '+resp.msg));
+			$('#sentMsg').append($('<li>').html('<div class="message"><b>'+resp.username+'</b> <span class="time">'+
+				time+'</span> <span class="lineMessage">'+resp.msg+'</span></div>'));
 		}
 
 		// Scroll to the last message

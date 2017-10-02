@@ -36,9 +36,13 @@ input{
 	background-color: #eee;
 }
 
-#sentMsg li{
-	position: relative;
-	bottom: 0;
+#sentMsg li span.time{
+	font-size: .6em;
+	color: #666;
+}
+
+#sentMsg li span.lineMessage{
+	margin-left: 10px;
 }
 
 /* the input to send message */
