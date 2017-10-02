@@ -40,7 +40,11 @@ $(function () {
 		else{
 			$('#sentMsg').append($('<li>').html('<div class="message"><b>'+resp.username+'</b> <span class="time">'+
 				time+'</span> <span class="lineMessage">'+resp.msg+'</span></div>'));
+				var audio = new Audio('../audio/solemn.mp3');
+				audio.play();
 		}
+
+
 
 		// Scroll to the last message
 		$('#sentMsg').scrollTop($('#sentMsg')[0].scrollHeight);
