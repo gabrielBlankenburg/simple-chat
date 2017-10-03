@@ -25,11 +25,15 @@ $(function () {
 	socket.on('message', function(resp){
 		// Gets the current date and time
 		var dt = new Date();
-		var hours = dt.getHours();
-		var minute = dt.getMinutes();
+		var hours = ''+dt.getHours();
+		var minute = ''+dt.getMinutes();
 		if(minute.length == 1){
 			minute = '0'+minute;
 		}
+		if(hours.length == 1){
+			hours = '0'+hours;
+		}
+		console.log(minute.length)
 		var time = hours+':'+minute;
 
 		// Adds the class if the username that sent the message is the current user
