@@ -42,10 +42,10 @@ $(function () {
 				time+'</span> <span class="lineMessage">'+resp.msg+'</span></div>'));
 		}
 		else{
+			var audio = new Audio('../audio/solemn.mp3');
 			$('#sentMsg').append($('<li>').html('<div class="message"><b>'+resp.username+'</b> <span class="time">'+
 				time+'</span> <span class="lineMessage">'+resp.msg+'</span></div>'));
-				var audio = new Audio('../audio/solemn.mp3');
-				audio.play();
+			audio.play();
 		}
 
 
