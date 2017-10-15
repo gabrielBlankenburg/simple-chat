@@ -12,7 +12,6 @@ input{
 
 /* the div that wraps the form and the chat */
 #chat{
-	display: none;
 	height: 100vh;
 	position: absolute;
 	width: 100%;
@@ -85,6 +84,11 @@ input{
 	border-radius: 10px;
 	border-color: #db1a1a;
 	background-color: #ddd;
+}
+.server{
+	color: grey;
+	font-style: italic;
+	text-decoration: underline; 
 }
 
 /* the div that wrappes the nickname input */

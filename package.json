@@ -4,9 +4,9 @@
   "description": "A simple chat system with node.js",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
-  },  
+  },
   "keywords": [
     "chat",
     "node"
@@ -14,7 +14,10 @@
   "author": "Gabriel Blankenburg Piasecki Silva",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "browser-sync": "^2.18.13",
+    "consolidate": "^0.14.5",
+    "ejs": "^2.5.7",
     "express": "^4.16.1",
     "socket.io": "^2.0.3"
   },
@@ -26,7 +29,7 @@
     "gulp-refresh": "^1.1.0",
     "http": "0.0.0",
     "jquery": "^3.2.1"
-  }, 
+  },
   "engines": {
     "node": "6.11.0"
   }

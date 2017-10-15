@@ -5,25 +5,16 @@
 	<link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-	
-	<div id="user">
-		<form>
-			<label for="nickname">Enter a nickname</label>
-			<div id="nicknameInput">
-				<input type="text" id="nickname" placeholder="MyNickname">
-			</div>
-		</form>
-	</div>
-
     <div id="chat">
     	<ul id="sentMsg"></ul>
-	    <form>
+	    <form method="" action="">
 	      <input type="text" id="msg" placeholder="Say something" autocomplete="off" />
 	    </form>
     </div>
-
-
-
+	<script>
+		var username = <%- JSON.stringify(nickname) %>;
+		var id = <%- JSON.stringify(id) %>;
+	</script>
 	<script src="script/socket.io.js"></script>
 	<script src="script/main-min.js"></script>
 </body>

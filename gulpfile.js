@@ -10,7 +10,7 @@ gulp.task('javascript', function(){
 	return gulp.src('src/*.js')
 			.pipe(browserify({ debug: true }))
 			.pipe(minify())
-			.pipe(gulp.dest('public/script'));
+			.pipe(gulp.dest('views/script'));
 });
 
 gulp.task('watch', function(){
